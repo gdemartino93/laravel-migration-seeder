@@ -17,11 +17,11 @@ return new class extends Migration
             $table -> id();
             $table -> string("Azienda" , 50);
             $table -> string("Nome" , 100);
-            $table -> string("Codice Treno", 8)-> nullable(true);
+            $table -> string("CodiceTreno", 8)-> nullable(true);
             $table -> string("StazionediPartenza",50)-> nullable(true);
             $table -> string("StazioneDiArrivo",50)-> nullable(true);
-            $table -> date("OrarioDiPartenza")-> nullable(true);
-            $table -> date("OrarioDiArrivo")-> nullable(true);
+            $table -> string("OrarioDiPartenza")-> nullable(true);
+            $table -> string("OrarioDiArrivo")-> nullable(true);
             $table -> tinyInteger("NumCarrozze")-> nullable(true);
             $table -> tinyInteger("VagoneNotte") -> nullable(true);
             $table->timestamps();

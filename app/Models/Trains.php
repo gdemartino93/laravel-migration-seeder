@@ -38,6 +38,12 @@ class Trains extends Model
     public function getNome(){
         return $this-> Nome;
     }
+    public function setCodiceTreno($CodiceTreno){
+        $this-> CodiceTreno = $CodiceTreno;
+    }
+    public function getCodiceTreno(){
+        return $this-> CodiceTreno;
+    }
     public function setOrarioDiPartenza($OrarioDiPartenza){
         $this-> OrarioDiPartenza = $OrarioDiPartenza;
     }
