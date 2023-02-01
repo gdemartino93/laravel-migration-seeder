@@ -11,9 +11,11 @@ class MainController extends Controller
     public function home(){
 
         $trains = Trains::all();
+        $travels = Travels::all();
         
         $data = [
             "trains" => $trains,
+            "travels" => $travels
         ];
 
         return view("pages.home",$data);

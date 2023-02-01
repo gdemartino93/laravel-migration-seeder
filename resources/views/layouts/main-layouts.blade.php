@@ -12,6 +12,9 @@
         @include('components.header')
     </header>
 
+    <main>
+        @yield('contents')
+    </main>
 
     <footer>
 
