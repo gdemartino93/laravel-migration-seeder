@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Trains;
+use App\Models\Travels;
 
 class MainController extends Controller
 {
@@ -45,6 +46,19 @@ class MainController extends Controller
         // $italo -> VagoneNotte = 1;
 
         // $italo -> save();
+
+        $crociera = new Travels();
+
+        $crociera -> Nome ="costa santa";
+        $crociera -> Prezzo = 1200;
+        $crociera -> ConsigliatoFamiglia = 1;
+        $crociera -> DurataInGiorni = 45;
+
+        $crociera -> save();
     }
 }
 
+// $crociera -> setNome("costa meraviglia");
+// $crociera -> setPrezzo(1900);
+// $crociera -> setConsigliatoFamiglia(0);
+// $crociera -> setDurataInGiorni(35);

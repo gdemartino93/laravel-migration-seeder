@@ -18,8 +18,8 @@ return new class extends Migration
 
             $table -> string("Nome", 60);
             $table -> mediumInteger("Prezzo");
-            $table -> tinyInteger("Consigliato Famiglia") -> nullable("true");
-            $table -> smallInteger("Durata in giorni");
+            $table -> tinyInteger("ConsigliatoFamiglia") -> nullable("true");
+            $table -> smallInteger("DurataInGiorni");
 
 
             $table->timestamps();
