@@ -14,3 +14,5 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, "home"]);
+Route::get('/add', [MainController::class, "add"]);
+

@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
-            $table->id();
-            $table -> string("Azienda");
-            $table -> string("Nome");
-            $table -> string("Codice Treno");
-            $table -> string("StazionediPartenza");
-            $table -> string("StazioneDiArrivo");
-            $table -> date("OrarioDiPartenza");
-            $table -> date("OrarioDiArrivo");
-            $table -> tinyInteger("NumCarrozze");
-            $table -> boolean("VagoneNotte");
+            $table -> id();
+            $table -> string("Azienda" , 50);
+            $table -> string("Nome" , 100);
+            $table -> string("Codice Treno", 8)-> nullable(true);
+            $table -> string("StazionediPartenza",50)-> nullable(true);
+            $table -> string("StazioneDiArrivo",50)-> nullable(true);
+            $table -> date("OrarioDiPartenza")-> nullable(true);
+            $table -> date("OrarioDiArrivo")-> nullable(true);
+            $table -> tinyInteger("NumCarrozze")-> nullable(true);
+            $table -> tinyInteger("VagoneNotte") -> nullable(true);
             $table->timestamps();
         });
     }
