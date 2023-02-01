@@ -18,12 +18,12 @@ return new class extends Migration
             $table -> string("Azienda");
             $table -> string("Nome");
             $table -> string("Codice Treno");
-            $table -> string("Stazione di partenza");
-            $table -> string("Stazione di arrivo");
-            $table -> date("Orario di partenza");
-            $table -> date("Orario di arrivo");
+            $table -> string("StazionediPartenza");
+            $table -> string("StazioneDiArrivo");
+            $table -> date("OrarioDiPartenza");
+            $table -> date("OrarioDiArrivo");
             $table -> tinyInteger("NumCarrozze");
-            $table -> boolean("Vagone Notte");
+            $table -> boolean("VagoneNotte");
             $table->timestamps();
         });
     }
