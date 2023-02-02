@@ -61,7 +61,7 @@ class MainController extends Controller
 
     public function filtered(){
 
-        $travels = Travels::where("Prezzo",">",1500) ->get();
+        $travels = Travels::where("Prezzo",">",1400) ->get();
         
         $data = [
             "travels" => $travels
