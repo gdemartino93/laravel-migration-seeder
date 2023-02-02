@@ -52,11 +52,22 @@ class MainController extends Controller
         $crociera = new Travels();
 
         $crociera -> Nome ="costa santa";
-        $crociera -> Prezzo = 1200;
+        $crociera -> Prezzo = 1500;
         $crociera -> ConsigliatoFamiglia = 1;
         $crociera -> DurataInGiorni = 45;
 
         $crociera -> save();
+    }
+
+    public function filtered(){
+
+        $travels = Travels::where("Prezzo",">",1500) ->get();
+        
+        $data = [
+            "travels" => $travels
+        ];
+
+        return view("pages.home",$data);
     }
 }
 

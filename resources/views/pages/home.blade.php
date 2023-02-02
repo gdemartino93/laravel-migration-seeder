@@ -3,7 +3,7 @@
 @section('contents')
     @foreach ($travels as $travel)
     <ul>
-        <li>{{$travel["Nome"]}}</li>
+        <li>{{$travel["Nome"]}} - {{ $travel["Prezzo"]}} &euro;</li>
     </ul>
     @endforeach
 @endsection
